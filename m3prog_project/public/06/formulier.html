@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weerbericht Formulier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input {
+            display:block;
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button:active
+        {
+            transform: scale(95%);
+        }
+
+        select{
+            display:block;
+            width: 97.5%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="verwerk.php" method="POST">
+        <label for="stad">Stad:</label>
+        <input type="text" id="stad" name="stad" placeholder="Voer stad in" required>
+
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" name="datum" required>
+
+        <label for="weertype">Weertype:</label>
+        <select id="weertype" name="weertype">
+            <option value="zon">Zon</option>
+            <option value="regen">Regen</option>
+            <option value="bewolkt">Bewolkt</option>
+            <option value="sneeuw">Sneeuw</option>
+        </select>
+
+        <button type="submit">Verstuur</button>
+    </form>
+</body>
+</html>
